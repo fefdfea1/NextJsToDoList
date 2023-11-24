@@ -5,7 +5,6 @@ export default async function handler(req, res) {
   const db = client.db("forum");
   const result = await db.collection("data").find().toArray();
   const dataLength = result.length;
-  console.log(dataLength);
 
   if (req.method === "POST") {
     db.collection("data").insertOne({

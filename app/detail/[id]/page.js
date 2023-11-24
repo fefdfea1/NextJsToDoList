@@ -1,6 +1,4 @@
-import { useParams } from "next/navigation";
 import { connectDB } from "@/utill/database";
-import { ObjectId } from "mongodb";
 export default async function page(props) {
   const client = await connectDB;
   const db = client.db("forum");
