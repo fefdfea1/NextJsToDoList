@@ -2,7 +2,6 @@ import { connectDB } from "@/utill/database";
 export default async function Edit(req, res) {
   const client = await connectDB;
   const db = client.db("forum");
-  console.log(req.body);
   if (req.method === "POST") {
     try {
       const edit = await db
